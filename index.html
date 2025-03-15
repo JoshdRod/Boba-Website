@@ -3,7 +3,7 @@
     <head>
 
     </head>
-    <body>
+    <body style="background-color: turquoise;">
         <h1>
             my favourite colours
         </h1>
@@ -18,5 +18,21 @@
                 <td>a nice green</td>
             </tr>
         </table>
+        <div style="text-align: center;">
+            <p>What's your favourite colour? Let me know</p>
+            <form onsubmit="submit(event)">
+                <input type="text" name="response" id="responseText">
+                <input type="submit" value="submit">
+            </form>
+            <p style="text-align: center;" id="favouriteColour"></p>
+        </div>
     </body>
 </html>
+
+<script>
+    function submit(event) {
+        var response = document.getElementById("responseText").innerText;
+        document.getElementById('favouriteColour').innerText = 'Hello!';
+        event.preventDefault();
+    }
+</script>
